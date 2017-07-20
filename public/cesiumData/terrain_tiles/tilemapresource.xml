@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<TileMap version="1.0.0" tilemapservice="http://tms.osgeo.org/1.0.0">
+	  <Title>yy_dem.tif</Title>
+	  <Abstract></Abstract>
+	  <SRS>EPSG:4326</SRS>
+	  <BoundingBox minx="28.99986111111110" miny="120.99986111111112" maxx="31.00013888888889" maxy="122.00013888888890"/>
+	  <Origin x="28.99986111111110" y="120.99986111111112"/>
+	  <TileFormat width="65" height="65" mime-type="image/terrain" extension="terrain"/>
+	  <TileSets profile="geodetic">
+	    <TileSet href="0" units-per-pixel="0.70312500000000" order="0"/>
+	    <TileSet href="1" units-per-pixel="0.35156250000000" order="1"/>
+	    <TileSet href="2" units-per-pixel="0.17578125000000" order="2"/>
+	    <TileSet href="3" units-per-pixel="0.08789062500000" order="3"/>
+	    <TileSet href="4" units-per-pixel="0.04394531250000" order="4"/>
+	    <TileSet href="5" units-per-pixel="0.02197265625000" order="5"/>
+	    <TileSet href="6" units-per-pixel="0.01098632812500" order="6"/>
+	    <TileSet href="7" units-per-pixel="0.00549316406250" order="7"/>
+	    <TileSet href="8" units-per-pixel="0.00274658203125" order="8"/>
+	    <TileSet href="9" units-per-pixel="0.00137329101562" order="9"/>
+	    <TileSet href="10" units-per-pixel="0.00068664550781" order="10"/>
+	    <TileSet href="11" units-per-pixel="0.00034332275391" order="11"/>
+	    <TileSet href="12" units-per-pixel="0.00017166137695" order="12"/>
+	  </TileSets>
+	</TileMap>
+	
