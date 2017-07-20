@@ -23,7 +23,7 @@ class Cesium3dtiles extends Component {
             const boundingSphere = tileset.boundingSphere;
             self.props.viewer.camera.viewBoundingSphere(boundingSphere, new HeadingPitchRange(0.0, -0.5, boundingSphere.radius * 2));
             self.props.viewer.camera.lookAtTransform(Matrix4.IDENTITY);
-            const height = -600;
+            const height = -1400;
             const cartographic = Cartographic.fromCartesian(tileset.boundingSphere.center);
             const surface = Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, 0.0);
             const offset = Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, height);
