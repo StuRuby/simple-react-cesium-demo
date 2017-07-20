@@ -6,6 +6,7 @@ import ArcGisMapServerImageryProvider from 'cesium/Source/Scene/ArcGisMapServerI
 
 import CesiumProjectContents from './CesiumProjectContents';
 // import CesiumClickHandler from './CesiumClickHandler';
+import CesiumUtils from './utils/CesiumUtils';
 
 const GlobalConfig = require('./config')
 GlobalConfig = GlobalConfig.globalConfig;
@@ -30,6 +31,7 @@ class CesiumGlobe extends Component {
         this.viewer = new Viewer(this.cesiumContainer
            // GlobalConfig.viewerParam
         );
+        this.camera=this.viewer.camera;
         this.setState({
             viewerLoaded: true
         })
@@ -61,6 +63,7 @@ class CesiumGlobe extends Component {
                 <div ref={(element) => { this.cesiumContainer = element }}>
                     {contents}
                 </div>
+                <CesiumUtils viewer={this.viewer} camera={this.camera}/>
             </div>
         )
     }
