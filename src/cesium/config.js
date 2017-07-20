@@ -14,5 +14,4 @@ export const globalConfig = {
         scene3DOnly: true,
     },
     arcgisMapServerImageryProviderUrl: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
-    
 }

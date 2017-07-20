@@ -4,11 +4,11 @@ import Viewer from 'cesium/Source/Widgets/Viewer/Viewer';
 
 import ArcGisMapServerImageryProvider from 'cesium/Source/Scene/ArcGisMapServerImageryProvider';
 
-// import CesiumProjectContents from './CesiumProjectContents';
+import CesiumProjectContents from './CesiumProjectContents';
 // import CesiumClickHandler from './CesiumClickHandler';
 
-const GlobalConfig =require('./config')
-GlobalConfig=GlobalConfig.globalConfig;
+const GlobalConfig = require('./config')
+GlobalConfig = GlobalConfig.globalConfig;
 
 class CesiumGlobe extends Component {
     constructor() {
@@ -27,26 +27,39 @@ class CesiumGlobe extends Component {
             url: GlobalConfig.arcgisMapServerImageryProviderUrl
         });
 
-        this.viewer = new Viewer(this.cesiumContainer,
-            GlobalConfig.viewerParam
+        this.viewer = new Viewer(this.cesiumContainer
+           // GlobalConfig.viewerParam
         );
         this.setState({
             viewerLoaded: true
         })
     }
-
+    renderContents(){
+        const viewerLoaded=this.state.viewerLoaded;
+        let contents=null;
+        if(viewerLoaded){
+            contents=(
+                <span>
+                    <CesiumProjectContents viewer={this.viewer}/>
+                </span>
+            )
+        }
+        return contents;
+    }
     render() {
         const containerStyle = {
             width: '100%',
             height: '100%',
-            overflow:'hidden',
+            overflow: 'hidden',
             margin: '0',
             padding: '0'
         }
+        const contents=this.renderContents();
+
         return (
             <div className='' style={containerStyle}>
                 <div ref={(element) => { this.cesiumContainer = element }}>
-
+                    {contents}
                 </div>
             </div>
         )
